@@ -97,6 +97,64 @@
                 <label for="phone">Phone Number</label>
                 <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
               </div>
+              
+              <h4>Payment Method</h4>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="cashOnDelivery" value="Cash on Delivery" required>
+                  <label class="form-check-label" for="cashOnDelivery">
+                    Cash on Delivery
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="gcash" value="Gcash" required>
+                  <label class="form-check-label" for="gcash">
+                    Gcash
+                  </label>
+                  <div id="gcashDetails" class="payment-details" style="display: none; margin-top: 10px;">
+                    <label for="gcashNumber">Gcash Phone Number or Scan QR Code</label>
+                    <input type="text" class="form-control" id="gcashNumber" placeholder="Enter Gcash phone number">
+                    <div style="margin-top: 10px;">
+                      <img src="images/gcash_qr_code.png" alt="Gcash QR Code" style="max-width: 200px;">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="Visa" required>
+                  <label class="form-check-label" for="visa">
+                    Visa
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="Mastercard" required>
+                  <label class="form-check-label" for="mastercard">
+                    Mastercard
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="Credit Card" required>
+                  <label class="form-check-label" for="creditCard">
+                    Credit Card
+                  </label>
+                </div>
+              </div>
+
+              <div id="cardDetails" class="payment-details" style="display: none; margin-top: 20px;">
+                <h4>Card Details</h4>
+                <div class="form-group">
+                  <label for="cardNumber">Card Number</label>
+                  <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" required>
+                </div>
+                <div class="form-group">
+                  <label for="cardExpiry">Expiry Date</label>
+                  <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                  <label for="cardCVC">CVC</label>
+                  <input type="text" class="form-control" id="cardCVC" placeholder="CVC" required>
+                </div>
+              </div>
+
               <div class="checkout_btn">
                 <button type="submit" class="btn btn-primary">
                   Place Order
@@ -117,6 +175,25 @@
   
       // Redirect to the confirmation page after successful submission
       window.location.href = "placeorder.html"; // Replace 'confirmation.html' with your desired page
+    });
+
+    // Show or hide payment details based on selected payment method
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(function(el) {
+      el.addEventListener('change', function() {
+        const gcashDetails = document.getElementById('gcashDetails');
+        const cardDetails = document.getElementById('cardDetails');
+        
+        if (this.id === 'gcash') {
+          gcashDetails.style.display = 'block';
+          cardDetails.style.display = 'none';
+        } else if (this.id === 'visa' || this.id === 'mastercard' || this.id === 'creditCard') {
+          gcashDetails.style.display = 'none';
+          cardDetails.style.display = 'block';
+        } else {
+          gcashDetails.style.display = 'none';
+          cardDetails.style.display = 'none';
+        }
+      });
     });
   </script>
   
