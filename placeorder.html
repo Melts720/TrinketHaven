@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Order Confirmation - Trinket Haven</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Custom CSS for styling -->
+  <style>
+    .order_section {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+    }
+    .order_summary {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .order_summary h4 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .order_summary p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .order_summary .order_details {
+      margin-top: 20px;
+    }
+    .order_details ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .order_details ul li {
+      font-size: 16px;
+      color: #555;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .order_details ul li span {
+      font-weight: bold;
+    }
+    .order_btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .order_btn .btn {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+    .order_btn .btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- header section starts -->
+  <header class="header_section innerpage_header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a href="#" class="nav-logo">
+          <img src="images/trinket_haven_logo.png" alt="Company Logo" class="logo">
+        </a>
+        <div class="" id="">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- order confirmation section -->
+  <section class="order_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Order Confirmation
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="order_summary">
+            <h4>Thank you for your order!</h4>
+            <p>Your order has been successfully placed. Below are the details of your order:</p>
+            <div class="order_details">
+              <ul>
+                <li><span>Order Reference Number:</span> #123456789</li>
+                <li><span>Product:</span> Handmade Necklace</li>
+                <li><span>Price:</span> Php200</li>
+                <li><span>Quantity:</span> 1</li>
+                <li><span>Total:</span> Php200</li>
+                <li><span>Estimated Delivery Time:</span> 3-5 business days</li>
+                <li><span>Mode of Payment:</span> Cash on Delivery</li>
+              </ul>
+            </div>
+            <div class="order_btn">
+              <a href="index.html" class="btn btn-primary">
+                Continue Shopping
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end order confirmation section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row info_form_social_row">
+        <div class="col-md-8 col-lg-9">
+          <div class="info_form">
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Trinket Haven</a>
+      </p>
+    </div>
+  </footer>
+  <!-- end footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>
